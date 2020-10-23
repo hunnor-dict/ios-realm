@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		6615697025404F3500AA1AFA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 6615696F25404F3500AA1AFA /* Realm */; };
 		6615697225404F3500AA1AFA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6615697125404F3500AA1AFA /* RealmSwift */; };
+		661A54C72541C15D00D71DA1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 661A54C62541C15D00D71DA1 /* Media.xcassets */; };
+		661A54C92541C15D00D71DA1 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A54C82541C15D00D71DA1 /* ActionViewController.swift */; };
+		661A54CC2541C15D00D71DA1 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661A54CA2541C15D00D71DA1 /* MainInterface.storyboard */; };
+		661A54D02541C15D00D71DA1 /* HunNorActionExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 661A54C42541C15D00D71DA1 /* HunNorActionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		664A30D8253EE14C008743C9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 664A30D7253EE14C008743C9 /* Settings.bundle */; };
 		665388E5253CA110001897FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665388E4253CA110001897FA /* AppDelegate.swift */; };
 		665388E7253CA110001897FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665388E6253CA110001897FA /* SceneDelegate.swift */; };
@@ -20,12 +24,48 @@
 		66538908253CA4F7001897FA /* HunNor.realm in Resources */ = {isa = PBXBuildFile; fileRef = 66538907253CA4F7001897FA /* HunNor.realm */; };
 		6653890B253CA56C001897FA /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6653890A253CA56C001897FA /* Word.swift */; };
 		6653890E253CA5A1001897FA /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6653890D253CA5A1001897FA /* Entry.swift */; };
+		6673DB2F25436EA90054F638 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 6673DB2E25436EA90054F638 /* Realm */; };
+		6673DB3125436EA90054F638 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6673DB3025436EA90054F638 /* RealmSwift */; };
+		6673DB40254371110054F638 /* HunNor.realm in Resources */ = {isa = PBXBuildFile; fileRef = 66538907253CA4F7001897FA /* HunNor.realm */; };
+		6673DB4B254436BA0054F638 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665388FA253CA164001897FA /* Dictionary.swift */; };
+		6673DB4E254436BD0054F638 /* DictionaryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C72360253DF51A0052BE6E /* DictionaryDelegate.swift */; };
+		6673DB51254436C20054F638 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6653890A253CA56C001897FA /* Word.swift */; };
+		6673DB54254436C50054F638 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6653890D253CA5A1001897FA /* Entry.swift */; };
 		66C72361253DF51A0052BE6E /* DictionaryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C72360253DF51A0052BE6E /* DictionaryDelegate.swift */; };
 		66EE7A8C253E1477007BFDAE /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE7A8B253E1477007BFDAE /* AboutController.swift */; };
 		66EE7A8F253E16BC007BFDAE /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE7A8E253E16BC007BFDAE /* History.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		661A54CE2541C15D00D71DA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 665388D9253CA110001897FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 661A54C32541C15D00D71DA1;
+			remoteInfo = HunNorActionExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		661A54D12541C15D00D71DA1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				661A54D02541C15D00D71DA1 /* HunNorActionExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		661A54C42541C15D00D71DA1 /* HunNorActionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HunNorActionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		661A54C62541C15D00D71DA1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		661A54C82541C15D00D71DA1 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		661A54CB2541C15D00D71DA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		661A54CD2541C15D00D71DA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		664A30D7253EE14C008743C9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		665388E1253CA110001897FA /* HunNor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HunNor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		665388E4253CA110001897FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +85,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		661A54C12541C15D00D71DA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6673DB3125436EA90054F638 /* RealmSwift in Frameworks */,
+				6673DB2F25436EA90054F638 /* Realm in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		665388DE253CA110001897FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -66,12 +115,25 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		661A54C52541C15D00D71DA1 /* HunNorActionExtension */ = {
+			isa = PBXGroup;
+			children = (
+				661A54C62541C15D00D71DA1 /* Media.xcassets */,
+				661A54C82541C15D00D71DA1 /* ActionViewController.swift */,
+				661A54CA2541C15D00D71DA1 /* MainInterface.storyboard */,
+				661A54CD2541C15D00D71DA1 /* Info.plist */,
+			);
+			path = HunNorActionExtension;
+			sourceTree = "<group>";
+		};
 		665388D8253CA110001897FA = {
 			isa = PBXGroup;
 			children = (
 				664A30D7253EE14C008743C9 /* Settings.bundle */,
 				665388E3253CA110001897FA /* HunNor */,
+				661A54C52541C15D00D71DA1 /* HunNorActionExtension */,
 				665388E2253CA110001897FA /* Products */,
+				6673DB2D25436EA90054F638 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				665388E1253CA110001897FA /* HunNor.app */,
+				661A54C42541C15D00D71DA1 /* HunNorActionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,6 +181,13 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
+		6673DB2D25436EA90054F638 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		66EE7A88253DFB84007BFDAE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +200,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		661A54C32541C15D00D71DA1 /* HunNorActionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 661A54D42541C15D00D71DA1 /* Build configuration list for PBXNativeTarget "HunNorActionExtension" */;
+			buildPhases = (
+				661A54C02541C15D00D71DA1 /* Sources */,
+				661A54C12541C15D00D71DA1 /* Frameworks */,
+				661A54C22541C15D00D71DA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HunNorActionExtension;
+			packageProductDependencies = (
+				6673DB2E25436EA90054F638 /* Realm */,
+				6673DB3025436EA90054F638 /* RealmSwift */,
+			);
+			productName = HunNorActionExtension;
+			productReference = 661A54C42541C15D00D71DA1 /* HunNorActionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		665388E0253CA110001897FA /* HunNor */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 665388F5253CA111001897FA /* Build configuration list for PBXNativeTarget "HunNor" */;
@@ -137,10 +228,12 @@
 				665388DD253CA110001897FA /* Sources */,
 				665388DE253CA110001897FA /* Frameworks */,
 				665388DF253CA110001897FA /* Resources */,
+				661A54D12541C15D00D71DA1 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				661A54CF2541C15D00D71DA1 /* PBXTargetDependency */,
 			);
 			name = HunNor;
 			packageProductDependencies = (
@@ -157,9 +250,12 @@
 		665388D9253CA110001897FA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					661A54C32541C15D00D71DA1 = {
+						CreatedOnToolsVersion = 12.1;
+					};
 					665388E0253CA110001897FA = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
@@ -182,11 +278,22 @@
 			projectRoot = "";
 			targets = (
 				665388E0253CA110001897FA /* HunNor */,
+				661A54C32541C15D00D71DA1 /* HunNorActionExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		661A54C22541C15D00D71DA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				661A54C72541C15D00D71DA1 /* Media.xcassets in Resources */,
+				661A54CC2541C15D00D71DA1 /* MainInterface.storyboard in Resources */,
+				6673DB40254371110054F638 /* HunNor.realm in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		665388DF253CA110001897FA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,6 +309,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		661A54C02541C15D00D71DA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6673DB54254436C50054F638 /* Entry.swift in Sources */,
+				6673DB4E254436BD0054F638 /* DictionaryDelegate.swift in Sources */,
+				6673DB51254436C20054F638 /* Word.swift in Sources */,
+				661A54C92541C15D00D71DA1 /* ActionViewController.swift in Sources */,
+				6673DB4B254436BA0054F638 /* Dictionary.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		665388DD253CA110001897FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,7 +339,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		661A54CF2541C15D00D71DA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 661A54C32541C15D00D71DA1 /* HunNorActionExtension */;
+			targetProxy = 661A54CE2541C15D00D71DA1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		661A54CA2541C15D00D71DA1 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				661A54CB2541C15D00D71DA1 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		665388EA253CA110001897FA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -240,6 +375,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		661A54D22541C15D00D71DA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = ExtensionAppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = 78C9Y654T9;
+				INFOPLIST_FILE = HunNorActionExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.hunnor.dict.ios.HunNor.HunNorActionExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		661A54D32541C15D00D71DA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = ExtensionAppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = 78C9Y654T9;
+				INFOPLIST_FILE = HunNorActionExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.hunnor.dict.ios.HunNor.HunNorActionExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		665388F3253CA111001897FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -359,6 +538,7 @@
 		665388F6253CA111001897FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +558,7 @@
 		665388F7253CA111001897FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -397,6 +578,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		661A54D42541C15D00D71DA1 /* Build configuration list for PBXNativeTarget "HunNorActionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				661A54D22541C15D00D71DA1 /* Debug */,
+				661A54D32541C15D00D71DA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		665388DC253CA110001897FA /* Build configuration list for PBXProject "HunNor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -435,6 +625,16 @@
 			productName = Realm;
 		};
 		6615697125404F3500AA1AFA /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6615696E25404F3500AA1AFA /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		6673DB2E25436EA90054F638 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6615696E25404F3500AA1AFA /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		6673DB3025436EA90054F638 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6615696E25404F3500AA1AFA /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;

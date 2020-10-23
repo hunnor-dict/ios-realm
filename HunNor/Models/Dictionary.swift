@@ -41,6 +41,21 @@ class Dictionary {
         return entries
     }
     
+    func queryEntriesWithInflections(_ query: String) -> [Entry] {
+        if !isOpen() {
+            open()
+        }
+        var entries: [Entry] = []
+        if let safeRealm = realm {
+            let results = safeRealm.objects(Entry.self)
+                .filter("ANY roots.value = \"\(query)\" OR ANY inflections.value = \"\(query)\"")
+            for result in results {
+                entries.append(result)
+            }
+        }
+        return entries
+    }
+    
     private func isOpen() -> Bool {
         return realm != nil
     }
