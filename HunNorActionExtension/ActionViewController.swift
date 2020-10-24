@@ -26,7 +26,6 @@ class ActionViewController: UIViewController {
                                 itemProvider.loadItem(forTypeIdentifier: kUTTypeText as String, options: nil) { (result, error) in
                                     if let query = result as? String {
                                         DispatchQueue.main.async {
-                                            print("Query for \(query)")
                                             self.entries = Dictionary.sharedInstance.queryEntriesWithInflections(query)
                                             self.refreshTable()
                                         }
@@ -83,8 +82,6 @@ extension ActionViewController: UITableViewDataSource, UITableViewDelegate {
             let text = texts[indexPath.row]
             label.numberOfLines = 0
             label.attributedText = text
-        } else {
-            print("No text label")
         }
         return cell
     }

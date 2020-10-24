@@ -16,7 +16,7 @@
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>Előzmények</string>
+			<string>Ki/be</string>
 			<key>Key</key>
 			<string>historyEnabled</string>
 			<key>DefaultValue</key>
@@ -35,7 +35,7 @@
 			<key>Type</key>
 			<string>PSMultiValueSpecifier</string>
 			<key>Title</key>
-			<string>Méret</string>
+			<string>Listaméret</string>
 			<key>Key</key>
 			<string>historyCapacity</string>
 			<key>Values</key>
