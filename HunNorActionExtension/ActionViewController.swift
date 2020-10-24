@@ -4,7 +4,8 @@ import MobileCoreServices
 class ActionViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
+
+    var query: String?
     var entries: [Entry] = []
     var texts: [NSAttributedString] = []
     
@@ -26,6 +27,7 @@ class ActionViewController: UIViewController {
                                 itemProvider.loadItem(forTypeIdentifier: kUTTypeText as String, options: nil) { (result, error) in
                                     if let query = result as? String {
                                         DispatchQueue.main.async {
+                                            self.query = query
                                             self.entries = Dictionary.sharedInstance.queryEntriesWithInflections(query)
                                             self.refreshTable()
                                         }
@@ -86,6 +88,17 @@ extension ActionViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if let safeQuery = query {
+            if (texts.count == 0) {
+                return "\(safeQuery): nincs találat"
+            } else {
+                return "\(safeQuery): \(texts.count) találat"
+            }
+        }
+        return nil
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
     }
