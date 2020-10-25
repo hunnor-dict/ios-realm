@@ -1,0 +1,3 @@
+# Adatvédelmi szabályzat
+
+Adatvédelmi szabályzat
