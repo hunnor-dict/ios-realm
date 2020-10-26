@@ -1,6 +1,8 @@
-# HunNor of iOS
+# HunNor for iOS
 
 iOS application for the HunNor dictionary.
+
+Project page: [hunnor-dict.github.io/ios-realm](https://hunnor-dict.github.io/ios-realm/)
 
 # How to run the app
 
