@@ -15,10 +15,16 @@ class Dictionary {
         }
         var words: [Word] = []
         if let safeRealm = realm {
-            let results = safeRealm.objects(Word.self)
-                .filter("value BEGINSWITH[cd] \"\(query)\" AND inflected = 0")
+            var results = safeRealm.objects(Word.self)
+                .filter("value BEGINSWITH[c] \"\(query)\" AND inflected = 0")
                 .sorted(by: ["value"])
                 .distinct(by: ["value"])
+            if (results.isEmpty) {
+                results = safeRealm.objects(Word.self)
+                    .filter("value BEGINSWITH[cd] \"\(query)\" AND inflected = 0")
+                    .sorted(by: ["value"])
+                    .distinct(by: ["value"])
+            }
             while (words.count < 100 && results.count > words.count) {
                 words.append(results[words.count])
             }
