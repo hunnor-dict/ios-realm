@@ -4,7 +4,7 @@ class SearchController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-
+    
     var query: String?
     var results: [Any] = []
     
@@ -13,7 +13,7 @@ class SearchController: UIViewController {
         "div.infl {color: grey; font-size: 80%;}"]
     
     override func viewDidLoad() {
-
+        
         super.viewDidLoad()
         
         searchBar.delegate = self
@@ -60,7 +60,7 @@ class SearchController: UIViewController {
             documentAttributes: nil)
     }
     
-
+    
 }
 
 extension SearchController: UISearchBarDelegate {
@@ -161,6 +161,10 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate {
         
         return UISwipeActionsConfiguration(actions: actions)
         
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        searchBar.resignFirstResponder()
     }
     
 }
