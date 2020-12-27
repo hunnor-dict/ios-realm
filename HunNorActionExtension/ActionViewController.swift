@@ -29,6 +29,10 @@ class ActionViewController: UIViewController {
                                         DispatchQueue.main.async {
                                             self.query = query
                                             self.entries = Dictionary.sharedInstance.queryEntriesWithInflections(query)
+                                            if (self.entries.isEmpty) {
+                                                self.query = query.lowercased()
+                                                self.entries = Dictionary.sharedInstance.queryEntriesWithInflections(query.lowercased())
+                                            }
                                             self.refreshTable()
                                         }
                                     }
