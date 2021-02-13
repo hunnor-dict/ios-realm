@@ -8,9 +8,9 @@ class SearchController: UIViewController {
     var query: String?
     var results: [Any] = []
     
-    var style = [
-        "body {font-family: -apple-system; font-size: 14pt;}",
-        "div.infl {color: grey; font-size: 80%;}"]
+    var commonStyles = "body {font-family: -apple-system; font-size: 14pt;}"
+        + "div.infl {color: grey; font-size: 80%;}"
+    var modeSpecificStyles = ""
     
     override func viewDidLoad() {
         
@@ -21,12 +21,20 @@ class SearchController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        NotificationCenter.default.addObserver(self, selector: #selector(didActivate), name: UIScene.didActivateNotification, object: nil)
+        
         Dictionary.sharedInstance.delegate = self
         
-        if (traitCollection.userInterfaceStyle == .dark) {
-            style.append("body {color: white;}")
-        }
         changeQuery(to: query)
+        
+    }
+    
+    @objc func didActivate() {
+        tableView.reloadData()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     func changeQuery(to query: String?) {
@@ -48,8 +56,13 @@ class SearchController: UIViewController {
         searchBar.becomeFirstResponder()
     }
     
-    func buildDocument(style: [String], content: String) -> String {
-        return "<html><head><style type=\"text/css\">\(style.joined(separator: " "))</style></head><body>\(content)</body></html>"
+    func buildDocument(content: String) -> String {
+        if (traitCollection.userInterfaceStyle == .dark) {
+            modeSpecificStyles = "body {color: white;}"
+        } else {
+            modeSpecificStyles = ""
+        }
+        return "<html><head><style type=\"text/css\">\(commonStyles) \(modeSpecificStyles)</style></head><body>\(content)</body></html>"
     }
     
     func parseDocument(source: String) -> NSAttributedString? {
@@ -129,7 +142,7 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate {
                 // Entry from Dictionary
                 label.numberOfLines = 0
                 let content = entry.content
-                let source = buildDocument(style: style, content: content)
+                let source = buildDocument(content: content)
                 if let attributedText = parseDocument(source: source) {
                     label.attributedText = attributedText
                 } else {

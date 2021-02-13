@@ -4,14 +4,14 @@ import MobileCoreServices
 class ActionViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-
+    
     var query: String?
     var entries: [Entry] = []
     var texts: [NSAttributedString] = []
     
-    var style = [
-        "body {font-family: -apple-system; font-size: 14pt;}",
-        "div.infl {color: grey; font-size: 80%;}"]
+    var commonStyles = "body {font-family: -apple-system; font-size: 14pt;}"
+        + "div.infl {color: grey; font-size: 80%;}"
+    var modeSpecificStyles = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,7 @@ class ActionViewController: UIViewController {
     func refreshTable() {
         for entry in self.entries {
             let content = entry.content
-            let source = self.buildDocument(style: self.style, content: content)
+            let source = self.buildDocument(content: content)
             if let attributedText = self.parseDocument(source: source) {
                 self.texts.append(attributedText)
             }
@@ -56,8 +56,13 @@ class ActionViewController: UIViewController {
         self.tableView.reloadData()
     }
     
-    func buildDocument(style: [String], content: String) -> String {
-        return "<html><head><style type=\"text/css\">\(style.joined(separator: " "))</style></head><body>\(content)</body></html>"
+    func buildDocument(content: String) -> String {
+        if (traitCollection.userInterfaceStyle == .dark) {
+            modeSpecificStyles = "body {color: white;}"
+        } else {
+            modeSpecificStyles = ""
+        }
+        return "<html><head><style type=\"text/css\">\(commonStyles) \(modeSpecificStyles)</style></head><body>\(content)</body></html>"
     }
     
     func parseDocument(source: String) -> NSAttributedString? {
@@ -102,7 +107,7 @@ extension ActionViewController: UITableViewDataSource, UITableViewDelegate {
         }
         return nil
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
     }
