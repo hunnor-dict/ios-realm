@@ -9,6 +9,23 @@ class Dictionary {
     
     var delegate: DictionaryDelegate?
     
+    func counts() -> [String: Int] {
+        if !isOpen() {
+            open()
+        }
+        var hu = 0
+        var nb = 0
+        if let safeRealm = realm {
+            hu = safeRealm.objects(Entry.self)
+                .filter("lang = \"hu\"")
+                .count
+            nb = safeRealm.objects(Entry.self)
+                .filter("lang = \"nb\"")
+                .count
+        }
+        return ["hu": hu, "nb": nb]
+    }
+
     func queryWords(_ query: String) -> [Word] {
         if !isOpen() {
             open()
