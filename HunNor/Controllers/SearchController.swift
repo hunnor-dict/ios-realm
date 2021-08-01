@@ -5,6 +5,12 @@ class SearchController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBAction func settingsBarButton(_ sender: UIBarButtonItem) {
+        if let url = URL.init(string: UIApplication.openSettingsURLString) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+
     var query: String?
     var results: [Any] = []
     

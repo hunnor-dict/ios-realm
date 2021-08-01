@@ -53,11 +53,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="HunNor Szótár" id="3eS-dk-XII">
-                        <barButtonItem key="rightBarButtonItem" title="Beállítások" image="info.circle" catalog="system" id="qkb-YX-7bq">
-                            <connections>
-                                <segue destination="UZM-d4-b7l" kind="show" id="bF8-Rp-aGB"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Névjegy" image="info.circle" catalog="system" id="qkb-YX-7bq">
+                                <connections>
+                                    <segue destination="UZM-d4-b7l" kind="show" id="bF8-Rp-aGB"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Beállítások" image="gear" catalog="system" id="9fd-dx-IVd">
+                                <connections>
+                                    <action selector="settingsBarButton:" destination="BYZ-38-t0r" id="gz2-M8-DZr"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="z41-gm-plv" id="pDT-rx-RVR"/>
@@ -180,6 +187,7 @@
     </scenes>
     <resources>
         <image name="HunNor App Logo 1024" width="268.5" height="341"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
