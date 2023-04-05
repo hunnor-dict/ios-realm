@@ -12,7 +12,7 @@
 		661A54C72541C15D00D71DA1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 661A54C62541C15D00D71DA1 /* Media.xcassets */; };
 		661A54C92541C15D00D71DA1 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A54C82541C15D00D71DA1 /* ActionViewController.swift */; };
 		661A54CC2541C15D00D71DA1 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661A54CA2541C15D00D71DA1 /* MainInterface.storyboard */; };
-		661A54D02541C15D00D71DA1 /* HunNorActionExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 661A54C42541C15D00D71DA1 /* HunNorActionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		661A54D02541C15D00D71DA1 /* HunNorActionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 661A54C42541C15D00D71DA1 /* HunNorActionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		664A30D8253EE14C008743C9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 664A30D7253EE14C008743C9 /* Settings.bundle */; };
 		665388E5253CA110001897FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665388E4253CA110001897FA /* AppDelegate.swift */; };
 		665388E7253CA110001897FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665388E6253CA110001897FA /* SceneDelegate.swift */; };
@@ -47,15 +47,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		661A54D12541C15D00D71DA1 /* Embed App Extensions */ = {
+		661A54D12541C15D00D71DA1 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				661A54D02541C15D00D71DA1 /* HunNorActionExtension.appex in Embed App Extensions */,
+				661A54D02541C15D00D71DA1 /* HunNorActionExtension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -228,7 +228,7 @@
 				665388DD253CA110001897FA /* Sources */,
 				665388DE253CA110001897FA /* Frameworks */,
 				665388DF253CA110001897FA /* Resources */,
-				661A54D12541C15D00D71DA1 /* Embed App Extensions */,
+				661A54D12541C15D00D71DA1 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -251,7 +251,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1210;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					661A54C32541C15D00D71DA1 = {
 						CreatedOnToolsVersion = 12.1;
@@ -380,7 +380,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = ExtensionAppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = 78C9Y654T9;
 				INFOPLIST_FILE = HunNorActionExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -389,7 +389,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = net.hunnor.dict.ios.HunNor.HunNorActionExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -403,7 +403,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = ExtensionAppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = 78C9Y654T9;
 				INFOPLIST_FILE = HunNorActionExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -412,7 +412,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = net.hunnor.dict.ios.HunNor.HunNorActionExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -544,14 +544,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = 78C9Y654T9;
 				INFOPLIST_FILE = HunNor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = net.hunnor.dict.ios.HunNor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -566,14 +566,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = 78C9Y654T9;
 				INFOPLIST_FILE = HunNor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = net.hunnor.dict.ios.HunNor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
